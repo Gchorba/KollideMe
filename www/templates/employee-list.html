@@ -9,7 +9,7 @@
         <button class="button button-clear" ng-click="search()">Search</button>
     </div>
 
-    <ion-content class="has-header has-subheader">
+    <ion-content class="has-header has-subheader has-footer">
         <ion-list>
             <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
                       href="#/employees/{{employee.id}}">
@@ -20,7 +20,7 @@
         </ion-list>
     </ion-content>
 
-    <div class="bar bar-subheader item-input-inset">
+    <div class="bar bar-footer item-input-inset">
         <button class="button button-clear" ng-click="search()">Search</button>
     </div>
 
