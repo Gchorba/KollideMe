@@ -24,7 +24,7 @@ http.get(apiURL, function(res) {
     console.log(res);
   console.log("Got response: " + res.statusCode); 
   res.on('data', function (chunk) {
-    console.log("\tBegin\n" + chunk + "\t\nEnd")
+   // console.log("\tBegin\n" + chunk + "\t\nEnd")
  
     var employees1 = chunk[1];
    console.log("\tBegin\n" + employees1 + "\t\nEnd")
