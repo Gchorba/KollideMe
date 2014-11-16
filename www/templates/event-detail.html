@@ -22,7 +22,7 @@
 			<script>
 				function isIn(employee){
 					for(i=0;i<ev.length;i++){
-						if(ev[i] == employee){ return true; }
+						if(ev[i].firstname + "&*" + ev[i].lastname == employee.firstname + "&*" + employee.lastname){ return true; }
 					}
 					return false;
 				}
