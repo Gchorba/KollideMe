@@ -24,7 +24,7 @@ angular.module('directory.controllers', [])
     .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
         console.log('reports');
         $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
-    });
+    })
 
     .controller('NewEventCtrl', function ($scope, $stateParams, Employees) {
         console.log('newEvent');
