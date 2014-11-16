@@ -11,11 +11,10 @@ angular.module('directory.controllers', [])
 
         $scope.search = function () {
             $scope.employees = Employees.query({name: $scope.searchKey});
-            $scope.myEvents = MyEvents.query({name: $scope.searchKey});
         }
 
         $scope.employees = Employees.query();
-        $scope.myEvents = MyEvents.query();
+        $scope.myEvents = Employees.query();
     })
 
     .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {

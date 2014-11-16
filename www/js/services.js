@@ -5,5 +5,5 @@ angular.module('directory.services', ['ngResource'])
     })
 
     .factory('MyEvents', function ($resource) {
-        return $resource('/myEvents/:employeeId/:data');
+        return $resource('/events/:employeeId/:data');
     });
