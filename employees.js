@@ -27,7 +27,8 @@ http.get(apiURL, function(res) {
    // console.log("\tBegin\n" + chunk + "\t\nEnd")
  
    // var employees1 = eval(chunk);
-  employees = JSON.parse(chunk);
+  //employees = JSON.parse(chunk);
+  employees = chunk;
    console.log("\tBegin\n" + employees + "\t\nEnd")
   });
 }).on('error', function(e) {
