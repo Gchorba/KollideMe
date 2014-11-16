@@ -35,6 +35,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 templateUrl: 'templates/event-reports.html',
                 controller: 'EmployeeReportsCtrl'
             })
+			
             .state('newEvent', {
                 url: '/newEvent',
                 templateUrl: 'templates/event-reports.html',
