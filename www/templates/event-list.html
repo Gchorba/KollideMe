@@ -8,8 +8,12 @@
 					<button class="button button-clear" ng-click="clearSearch()">X</button>
 				</label>
 				<button class="button button-clear" ng-click="search()">Search</button>
+                 <ion-item href="#/newEvent" align="center">
+                    New Kollision
+                </ion-item>
 			</div>
 
+            
 			<ion-content class="has-header has-subheader has-footer">
 				<ion-list>
 					<ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
@@ -21,11 +25,6 @@
 				</ion-list>
 			</ion-content>
 			
-			<div class="bar bar-footer">
-				<ion-item href="#/newEvent" align="center">
-					New Kollision
-				</ion-item>
-			</div>
 		</ion-view>
 	</ion-tab>
 
