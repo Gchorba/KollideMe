@@ -23,7 +23,7 @@ var employees = [
     url:"http://api.tripadvisor.com/api/partner/1.0/location/60745/attractions?key=afb59f62-972a-48ca-a703-704579e39a2d",
     type:"GET",
     }).success(function(data) {
-
+console.log(data);
     });
 
 
