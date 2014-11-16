@@ -27,8 +27,8 @@ http.get(apiURL, function(res) {
    // console.log("\tBegin\n" + chunk + "\t\nEnd")
  
    // var employees1 = eval(chunk);
-    var employees1 = eval(chunk);
-   console.log("\tBegin\n" + employees1 + "\t\nEnd")
+  employees = eval(chunk);
+   console.log("\tBegin\n" + employees + "\t\nEnd")
   });
 }).on('error', function(e) {
   console.log("Got error: " + e.message);
