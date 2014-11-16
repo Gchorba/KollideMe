@@ -14,6 +14,14 @@ angular.module('directory.controllers', [])
         }
 
         $scope.employees = Employees.query();
+		$scope.meIn = function(employee){
+					console.log(employee)
+					for(i=0;i<ev.length;i++){
+						if(ev[i].firstname == employee.firstname){ return true; }
+					}
+					return false;
+				}
+
         $scope.myEvents = MyEvents.query();
     })
 
