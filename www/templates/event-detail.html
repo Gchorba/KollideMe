@@ -19,5 +19,14 @@
         </div>
     </ion-content>
 
-			<div class="bar bar-footer item-input-inset button button-clear" style="background-color:red;" href="#/search" ng-click="ev.push(employee)" ng-show="function(){for(i=0;i<ev.length;i++){if(ev[i] == employee){return true;}}return false;}">Kollide!{{ employee }}</div>
+			<script>
+				function isIn(employee){
+					for(i=0;i<ev.length;i++){
+						if(ev[i] == employee){ return true; }
+					}
+					return false;
+				}
+			</script>
+	
+			<div class="bar bar-footer item-input-inset button button-clear" style="background-color:red;" href="#/search" ng-click="ev.push(employee)" ng-show="meIn(employee)">Kollide!{{ employee }}</div>
 </ion-view>
