@@ -16,24 +16,24 @@ employees = [
 
 
 
-http=require("http");
-    var apiURL = "http://api.tripadvisor.com/api/partner/1.0/location/60745/attractions?key=afb59f62-972a-48ca-a703-704579e39a2d";
+// http=require("http");
+//     var apiURL = "http://api.tripadvisor.com/api/partner/1.0/location/60745/attractions?key=afb59f62-972a-48ca-a703-704579e39a2d";
   
 
-http.get(apiURL, function(res) {
-    console.log(res);
-  console.log("Got response: " + res.statusCode); 
-  res.on('data', function (chunk) {
-   // console.log("\tBegin\n" + chunk + "\t\nEnd")
+// http.get(apiURL, function(res) {
+//     console.log(res);
+//   console.log("Got response: " + res.statusCode); 
+//   res.on('data', function (chunk) {
+//    // console.log("\tBegin\n" + chunk + "\t\nEnd")
  
-   // var employees1 = eval(chunk);
-  //employees = JSON.parse(chunk);
-  employees = chunk;
-   console.log("\tBegin\n" + employees + "\t\nEnd")
-  });
-}).on('error', function(e) {
-  console.log("Got error: " + e.message);
-});
+//    // var employees1 = eval(chunk);
+//   //employees = JSON.parse(chunk);
+//   employees = chunk;
+//    console.log("\tBegin\n" + employees + "\t\nEnd")
+//   });
+// }).on('error', function(e) {
+//   console.log("Got error: " + e.message);
+// });
 
 exports.findAll = function (req, res, next) {
     var name = req.query.name;
