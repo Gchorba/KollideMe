@@ -18,16 +18,6 @@
             <a class="item item-icon-left"></i>Requirements<p>{{employee.requirements}}</p></a>
         </div>
     </ion-content>
-
-			<script>
-				function isIn(employee){
-					console.log(employee)
-					for(i=0;i<ev.length;i++){
-						if(ev[i].firstname == employee.firstname){ return true; }
-					}
-					return false;
-				}
-			</script>
 	
 			<div class="bar bar-footer item-input-inset button button-clear" style="background-color:red;" href="#/search" ng-click="ev.push(employee)" ng-show="meIn(employee)">Kollide!{{ employee }}</div>
 </ion-view>

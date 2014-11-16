@@ -3,6 +3,14 @@ ev = [
     {"id": 1, "firstName": "Julie", "lastName": "Taylor", "managerId": 0, "managerName": "James King", "reports": 2, "title": "VP of Marketing", "department": "Marketing", "cellPhone": "617-000-0002", "officePhone": "781-000-0002", "email": "jtaylor@fakemail.com", "city": "Boston, MA", "pic": "http://media-cdn.tripadvisor.com/media/photo-t/04/b5/96/56/off-the-eaten-path-tours.jpg", "twitterId": "@fakejtaylor", "blog": "http://coenraets.org"}
 ];
 
+				function meIn(employee){
+					console.log(employee)
+					for(i=0;i<ev.length;i++){
+						if(ev[i].firstname == employee.firstname){ return true; }
+					}
+					return false;
+				}
+
 angular.module('directory', ['ionic', 'directory.controllers', 'directory.services'])
 
     .run(function ($ionicPlatform) {
