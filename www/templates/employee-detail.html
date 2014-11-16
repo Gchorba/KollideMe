@@ -1,7 +1,6 @@
 <ion-view title="Employee">
 
     <ion-content has-header="true" has-footer="true" padding="true">
-
         <div class="list card">
             <div class="item item-avatar">
                 <img src="pics/{{employee.pic }}"/>
@@ -15,9 +14,8 @@
             <a class="item item-icon-left" href="sms:{{employee.cellPhone}}"><i class="icon ion-chatbox-working"></i>SMS<p>{{employee.cellPhone}}</p></a>
             <a class="item item-icon-left" href="mailto:{{employee.email}}"><i class="icon ion-ios7-email"></i>Email<p>{{employee.email}}</p></a>
         </div>
-
     </ion-content>
 	
-	<div class="bar bar-footer item-input-inset button button-clear" style="background-color:red;">Kollide!</div>
+	<div class="bar bar-footer item-input-inset button button-clear" style="background-color:red;" href="#/search">Kollide!</div>
 
 </ion-view>
