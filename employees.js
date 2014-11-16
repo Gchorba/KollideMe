@@ -24,7 +24,7 @@ http.get(apiURL, function(res) {
     console.log(res);
   console.log("Got response: " + res.statusCode); 
   res.on('data', function (chunk) {
-    console.log('BODY: ' + chunk);
+    employees = JSON.parse(chunk);
   });
 }).on('error', function(e) {
   console.log("Got error: " + e.message);
