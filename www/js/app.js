@@ -36,11 +36,11 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 controller: 'EmployeeReportsCtrl'
             }
 
-            .state('newEvent', {
-                url: '/newEvent',
-                templateUrl: 'templates/newEvent.html',
-                controller: 'NewEventCtrl'
-            });
+            // .state('newEvent', {
+            //     url: '/newEvent',
+            //     templateUrl: 'templates/newEvent.html',
+            //     controller: 'NewEventCtrl'
+            // });
 
         $urlRouterProvider.otherwise('/search');
 
