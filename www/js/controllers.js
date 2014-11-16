@@ -35,16 +35,5 @@ angular.module('directory.controllers', [])
     'subject' : '',
     'body' : ''
   };
-        
-    });
-.directive('formManager', function() {
-  return {
-    restrict : 'A',
-    controller : function($scope) {
       
-      $scope.$watch('faleComigoForm.$valid', function() {
-        console.log("Form validity changed. Now : " + $scope.faleComigoForm.$valid);
-      })
-    }
-  }
-})
+    });
