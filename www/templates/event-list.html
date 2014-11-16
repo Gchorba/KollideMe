@@ -1,29 +1,40 @@
-<ion-view title="Kollide-o-scope">
+<ion-tabs class="tabs-positive tabs-icon-only">
+	<ion-tab title="Kollide-o-scope" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+		<div class="bar bar-subheader item-input-inset">
+			<label class="item-input-wrapper">
+				<i class="icon ion-ios7-search placeholder-icon"></i>
+				<input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+				<button class="button button-clear" ng-click="clearSearch()">X</button>
+			</label>
+			<button class="button button-clear" ng-click="search()">Search</button>
+		</div>
 
-    <div class="bar bar-subheader item-input-inset">
-        <label class="item-input-wrapper">
-            <i class="icon ion-ios7-search placeholder-icon"></i>
-            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
-            <button class="button button-clear" ng-click="clearSearch()">X</button>
-        </label>
-        <button class="button button-clear" ng-click="search()">Search</button>
-    </div>
+		<ion-content class="has-header has-subheader has-footer">
+			<ion-list>
+				<ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
+						  href="#/events/{{employee.id}}">
+					<img src="{{employee.pic}}"/>
+					{{employee.firstName}}
+					<p>{{employee.type}}</p>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+		
+		<div class="bar bar-footer">
+			<ion-item href="#/newEvent" align="center">
+				New Kollision
+			</ion-item>
+		</div>
+	</ion-tab>
 
-    <ion-content class="has-header has-subheader has-footer">
-        <ion-list>
-            <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
-                      href="#/events/{{employee.id}}">
-                <img src="{{employee.pic}}"/>
-                {{employee.firstName}}
-                <p>{{employee.type}}</p>
-            </ion-item>
-        </ion-list>
-    </ion-content>
-	
-	<div class="bar bar-footer">
-		<ion-item href="#/newEvent" align="center">
-			New Kollision
-		</ion-item>
-	</div>
-
-</ion-view>
+	<ion-tab title="My Kollisions" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+		<ion-list>
+			<ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
+					  href="#/events/{{employee.id}}">
+				<img src="{{employee.pic}}"/>
+				{{employee.firstName}}
+				<p>{{employee.type}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-tab>
+</ion-tabs>
