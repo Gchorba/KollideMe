@@ -1,5 +1,5 @@
 var express = require('express'),
-    employees = require('./routes/employees'),
+    employees = require('./employees'),
     app = express();
 
 app.use(express.static('www'));
