@@ -13,7 +13,6 @@
                 </ion-item>
 			</div>
 
-            
 			<ion-content class="has-header has-subheader">
 				<ion-list>
 					<ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
@@ -45,7 +44,7 @@
 			<ion-content class="has-header has-subheader">
 				<ion-list>
 					<ion-item ng-repeat="employee in myEvents" type="item-text-wrap" class="item-avatar"
-							  href="#/myEvents/{{employee.id}}">
+							  href="#/events/{{employee.id}}">
 						<img src="{{employee.pic}}"/>
 						{{employee.firstName}}
 						<p>{{employee.type}}</p>

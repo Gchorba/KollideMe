@@ -41,7 +41,6 @@ exports.findReports = function (req, res, next) {
     response = {
         id: id,
         firstName: employees[id].firstName,
-       // lastName: employees[id].lastName,
         title: employees[id].title,
         pic: employees[id].pic
     }
