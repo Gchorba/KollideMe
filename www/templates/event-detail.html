@@ -21,8 +21,9 @@
 
 			<script>
 				function isIn(employee){
+					console.log(employee)
 					for(i=0;i<ev.length;i++){
-						if(ev[i].firstname + "&*" + ev[i].lastname == employee.firstname + "&*" + employee.lastname){ return true; }
+						if(ev[i].firstname == employee.firstname){ return true; }
 					}
 					return false;
 				}
