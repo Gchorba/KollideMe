@@ -12,13 +12,13 @@
           
             <a class="item item-icon-left"></i>Email<p>{{employee.email}}</p></a>
         
-
-        </div>
-    </ion-content>
-	<div class="row">
+    <div class="row">
                                 <button href="#/search" class="button button-assertive button-small col col-40"              > Cancel </button>
                                 <button ng-click="submit()" class="button button-balanced  button-small col col-40 col-offset-10"> Submit </button>
                             </div>
+        </div>
+    </ion-content>
+
 			<div class="bar bar-footer item-input-inset button button-clear" style="background-color:red;" href="#/search" ng-click="ev.push(employee)" ng-show="meIn(employee)">Kollide!{{ employee }}</div>
                                         
 </ion-view>
