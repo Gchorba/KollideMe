@@ -20,19 +20,19 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
 
             .state('search', {
                 url: '/search',
-                templateUrl: 'templates/employee-list.html',
+                templateUrl: 'templates/event-list.html',
                 controller: 'EmployeeListCtrl'
             })
 
             .state('employee', {
                 url: '/employees/:employeeId',
-                templateUrl: 'templates/employee-detail.html',
+                templateUrl: 'templates/event-detail.html',
                 controller: 'EmployeeDetailCtrl'
             })
 
             .state('reports', {
                 url: '/employees/:employeeId/reports',
-                templateUrl: 'templates/employee-reports.html',
+                templateUrl: 'templates/event-reports.html',
                 controller: 'EmployeeReportsCtrl'
             });
 
