@@ -1,27 +1,7 @@
-<ion-view title="Friends">
-   
-    <ion-header-bar class="bar-positive">
-      <h1 class="title">Checkboxes</h1>
-    </ion-header-bar>
-             
+<ion-view title="New Kollision">             
     <ion-content>
       
-      <div class="list">
-        
-        <ion-checkbox ng-repeat="item in devList"
-                      ng-model="item.checked" 
-                      ng-checked="item.checked">
-          {{ item.text }}
-        </ion-checkbox>
-        
-        <div class="item">
-          <pre ng-bind="devList | json"></pre> 
-        </div>
-        
-        <div class="item item-divider"> 
-          Notifications
-        </div>
-        
+      <div class="list">        
         <ion-checkbox ng-model="pushNotification.checked"
                       ng-change="pushNotificationChange()">
           Push Notifications
