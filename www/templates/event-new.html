@@ -5,7 +5,7 @@
     </ion-header-bar>
 
                 <ion-content class="has-header">
-                    <form  name="faleComigoForm" class="falecomigo" novalidate form-manager>
+                    <form  name="Form" class="form" novalidate form-manager>
                         <div class="list list-inset" >
                             <label class="item item-input">
                                 <input ng-model="message.name" name="fieldName" type="text" placeholder="Nome" required ng-minlength="2" ng-maxlength="70">
@@ -21,15 +21,15 @@
                             </label>
                         </div>
 
-                        <p>fieldName {{faleComigoForm.fieldName.$valid}}</p>
-                        <p>fieldEmail {{faleComigoForm.fieldEmail.$valid}}</p>
-                        <p>fieldSubject {{faleComigoForm.fieldSubject.$valid}}</p>
-                        <p>fieldBody {{faleComigoForm.fieldBody.$valid}}</p>
-                        <p>faleComigoForm {{faleComigoForm.$valid}}</p>
+                        <p>fieldName {{Form.fieldName.$valid}}</p>
+                        <p>fieldEmail {{Form.fieldEmail.$valid}}</p>
+                        <p>fieldSubject {{Form.fieldSubject.$valid}}</p>
+                        <p>fieldBody {{Form.fieldBody.$valid}}</p>
+                        <p>Form {{Form.$valid}}</p>
                         <div class="padding container">
                             <div class="row">
-                                <button ng-click="reset()"  class="button button-assertive button-small col col-40"              > Cancelar </button>
-                                <button ng-click="submit()" class="button button-balanced  button-small col col-40 col-offset-10"> Enviar </button>
+                                <button ng-click="reset()"  class="button button-assertive button-small col col-40"              > Cancel </button>
+                                <button ng-click="submit()" class="button button-balanced  button-small col col-40 col-offset-10"> Submit </button>
                             </div>
                         </div>
                     </form>
