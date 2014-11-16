@@ -1,52 +1,38 @@
 <ion-view title="New Kollision">             
-    <ion-content>
-      <div class="list">
-		<label class="item item-input">
-			<span class="input-label">Name</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Description</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Type</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Address</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Date</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Time</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Email</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Phone</span>
-			<input type="text" style="border: dotted">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Maximum People</span>
-			<input type="text" style="border: solid">
-		</label>
-		<label class="item item-input">
-			<span class="input-label">Other Requirements</span>
-			<input type="text" style="border: dotted">
-		</label>
-        <ion-checkbox ng-model="Members Only">
-			Members Only
-        </ion-checkbox>
-        <button class="button button-block button-positive">
-  Submit
-</button>
-      </div>
-    </ion-content>
+    
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Action Sheet</h1>
+    </ion-header-bar>
+
+                <ion-content class="has-header">
+                    <form  name="faleComigoForm" class="falecomigo" novalidate form-manager>
+                        <div class="list list-inset" >
+                            <label class="item item-input">
+                                <input ng-model="message.name" name="fieldName" type="text" placeholder="Nome" required ng-minlength="2" ng-maxlength="70">
+                            </label>
+                            <label class="item item-input">
+                                <input ng-model="message.email" name="fieldEmail" type="email" placeholder="E-mail" required ng-maxlength="50">
+                            </label>
+                            <label class="item item-input">
+                                <input ng-model="message.subject" name="fieldSubject" type="text" placeholder="Assunto" required ng-minlength="2" ng-maxlength="70">
+                            </label>
+                            <label class="item item-input">
+                                <textarea ng-model="message.body" name="fieldBody" placeholder="Mensagem" rows="3" required ng-minlength="2" ng-maxlength="70"></textarea>
+                            </label>
+                        </div>
+
+                        <p>fieldName {{faleComigoForm.fieldName.$valid}}</p>
+                        <p>fieldEmail {{faleComigoForm.fieldEmail.$valid}}</p>
+                        <p>fieldSubject {{faleComigoForm.fieldSubject.$valid}}</p>
+                        <p>fieldBody {{faleComigoForm.fieldBody.$valid}}</p>
+                        <p>faleComigoForm {{faleComigoForm.$valid}}</p>
+                        <div class="padding container">
+                            <div class="row">
+                                <button ng-click="reset()"  class="button button-assertive button-small col col-40"              > Cancelar </button>
+                                <button ng-click="submit()" class="button button-balanced  button-small col col-40 col-offset-10"> Enviar </button>
+                            </div>
+                        </div>
+                    </form>
+                </ion-content>
+    
 </ion-view>

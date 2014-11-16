@@ -39,7 +39,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
             .state('newEvent', {
                 url: '/newEvent',
                 templateUrl: 'templates/event-new.html',
-                controller: 'EmployeeReportsCtrl'
+                controller: 'NewEventCtrl'
             });
 
         $urlRouterProvider.otherwise('/search');
