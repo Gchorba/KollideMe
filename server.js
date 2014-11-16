@@ -1,5 +1,6 @@
 var express = require('express'),
     employees = require('./employees'),
+    myEvents = require('./myEvents'),
     app = express();
 
 app.use(express.static('www'));
@@ -14,6 +15,10 @@ app.all('*', function(req, res, next) {
 app.get('/events', employees.findAll);
 app.get('/events/:id', employees.findById);
 app.get('/events/:id/reports', employees.findReports);
+
+app.get('/myEvents', myEvents.findAll);
+app.get('/myEvents/:id', myEvents.findById);
+app.get('/myEvents/:id/reports', myEvents.findReports);
 
 app.set('port', process.env.PORT || 5000);
 
