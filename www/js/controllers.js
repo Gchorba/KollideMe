@@ -14,6 +14,7 @@ angular.module('directory.controllers', [])
         }
 
         $scope.employees = Employees.query();
+        $scope.newEvent = Employees.query();
     })
 
     .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
