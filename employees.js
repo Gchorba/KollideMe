@@ -66,7 +66,7 @@ exports.findReports = function (req, res, next) {
     for (var i=0; i<employees.length; i++) {
         employee = employees[i];
         if (employee.managerId === id) {
-            reports.push({id: employee.id, firstName: employee.firstName, lastName: employee.lastName, title: employee.title, pic: employee.pic});
+            reports.push({id: employee.id, firstName: employee.firstName,  title: employee.title, pic: employee.pic});
         }
     }
 
