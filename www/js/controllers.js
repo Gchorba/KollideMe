@@ -38,8 +38,6 @@ angular.module('directory.controllers', [])
     'date' : '',
     'time' : '',
     'phone' : ''
-
-   
-  };
+	});
       
     });
