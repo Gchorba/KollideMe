@@ -1,27 +1,13 @@
 <ion-view title="New Kollision">             
     <ion-content>
-      
-      <div class="list">        
-        <ion-checkbox ng-model="pushNotification.checked"
-                      ng-change="pushNotificationChange()">
-          Push Notifications
+      <div class="list">
+		<label class="item item-input">
+			<span class="input-label">Kollision Name</span>
+			<input type="text">
+		</label>
+        <ion-checkbox ng-model="Members Only">
+			Members Only
         </ion-checkbox>
-        
-        <div class="item">
-          <pre ng-bind="pushNotification | json"></pre> 
-        </div>
-        
-        <ion-checkbox ng-model="emailNotification"
-                      ng-true-value="Subscribed"
-                      ng-false-value="Unubscribed">
-          Newsletter
-        </ion-checkbox>
-        
-        <div class="item">
-          <pre ng-bind="emailNotification | json"></pre> 
-        </div>
-        
       </div>
-      
     </ion-content>
 </ion-view>
