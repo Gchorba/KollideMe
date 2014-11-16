@@ -83,7 +83,7 @@ exports.findReports = function (req, res, next) {
 
 //Good enough for the demo lol
 
-exports.findAll = function (req, res, next) {
+exports.findAllMyEvents = function (req, res, next) {
     var name = req.query.name;
     if (name) {
         res.send(myEvents.filter(function(employee) {
@@ -94,12 +94,12 @@ exports.findAll = function (req, res, next) {
     }
 };
 
-exports.findById = function (req, res, next) {
+exports.findByIdMyEvents = function (req, res, next) {
     var id = req.params.id;
     res.send(myEvents[id]);
 };
 
-exports.findReports = function (req, res, next) {
+exports.findReportsMyEvents = function (req, res, next) {
     var id = parseInt(req.params.id),
         response,
         reports = [],
