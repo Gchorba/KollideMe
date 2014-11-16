@@ -30,14 +30,13 @@ angular.module('directory.controllers', [])
 
     .controller('NewEventCtrl', function ($scope, $stateParams, Employees) {
         console.log('newEvent');
-          $scope.message = {
-    'name' : '',
-    'email' : '',
-    'type' : '',
-    'address' : '',
-    'date' : '',
-    'time' : '',
-    'phone' : ''
+        $scope.message = {
+			'name' : '',
+			'email' : '',
+			'type' : '',
+			'address' : '',
+			'date' : '',
+			'time' : '',
+			'phone' : ''
+		};
 	});
-      
-});
