@@ -1,6 +1,6 @@
 angular.module('directory.controllers', [])
 
-    .controller('EmployeeListCtrl', function ($scope, Employees) {
+    .controller('EmployeeListCtrl', function ($scope, Employees, MyEvents) {
 
         $scope.searchKey = "";
 
@@ -14,20 +14,20 @@ angular.module('directory.controllers', [])
         }
 
         $scope.employees = Employees.query();
-        $scope.myEvents = Employees.query();
+        $scope.myEvents = MyEvents.query();
     })
 
-    .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
+    .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees, MyEvents) {
         console.log('details');
         $scope.employee = Employees.get({employeeId: $stateParams.employeeId});
     })
 
-    .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
+    .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees, MyEvents) {
         console.log('reports');
         $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
     })
 
-    .controller('NewEventCtrl', function ($scope, $stateParams, Employees) {
+    .controller('NewEventCtrl', function ($scope, $stateParams, Employees, MyEvents) {
         console.log('newEvent');
         $scope.message = {
 			'name' : '',
