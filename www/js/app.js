@@ -25,13 +25,13 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
             })
 
             .state('employee', {
-                url: '/employees/:employeeId',
+                url: '/events/:employeeId',
                 templateUrl: 'templates/event-detail.html',
                 controller: 'EmployeeDetailCtrl'
             })
 
             .state('reports', {
-                url: '/employees/:employeeId/reports',
+                url: '/events/:employeeId/reports',
                 templateUrl: 'templates/event-reports.html',
                 controller: 'EmployeeReportsCtrl'
             });
