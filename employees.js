@@ -16,25 +16,6 @@ employees = [
 employees.push({"id": 12, "firstName": "James", "lastName": "King", "reports": 4, "title": "President and CEO", "department": "Corporate", "cellPhone": "617-000-0001", "officePhone": "781-000-0001", "email": "jking@fakemail.com", "city": "Boston, MA", "pic": "http://media-cdn.tripadvisor.com/media/photo-t/02/a3/60/11/filename-bunker-jpg-thumbnail0.jpg", "twitterId": "@fakejking", "blog": "http://coenraets.org"});
 
 
-// http=require("http");
-//     var apiURL = "http://api.tripadvisor.com/api/partner/1.0/location/60745/attractions?key=afb59f62-972a-48ca-a703-704579e39a2d";
-  
-
-// http.get(apiURL, function(res) {
-//     console.log(res);
-//   console.log("Got response: " + res.statusCode); 
-//   res.on('data', function (chunk) {
-//    // console.log("\tBegin\n" + chunk + "\t\nEnd")
- 
-//    // var employees1 = eval(chunk);
-//   //employees = JSON.parse(chunk);
-//   employees = chunk;
-//    console.log("\tBegin\n" + employees + "\t\nEnd")
-//   });
-// }).on('error', function(e) {
-//   console.log("Got error: " + e.message);
-// });
-
 exports.findAll = function (req, res, next) {
     var name = req.query.name;
     if (name) {
