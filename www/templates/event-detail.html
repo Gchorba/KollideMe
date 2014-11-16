@@ -3,7 +3,7 @@
     <ion-content has-header="true" has-footer="true" padding="true">
         <div class="list card">
             <div class="item item-avatar">
-                <h2>{{employee.firstName}} {{employee.lastName}}</h2>
+                <h2>{{employee.firstName}} </h2>
                 <p>{{employee.title}}</p>
             </div>
             <a class="item item-icon-left" href="#/events/{{employee.managerId}}" ng-if="employee.managerId > -1"><i class="icon ion-ios7-person"></i>View Manager<p>{{employee.managerName}}</p></a>
