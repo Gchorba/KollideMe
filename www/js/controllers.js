@@ -32,8 +32,13 @@ angular.module('directory.controllers', [])
           $scope.message = {
     'name' : '',
     'email' : '',
-    'subject' : '',
-    'body' : ''
+    'type' : '',
+    'address' : '',
+    'date' : '',
+    'time' : '',
+    'phone' : ''
+
+   
   };
       
     });
