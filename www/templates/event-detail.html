@@ -4,6 +4,7 @@
         <div class="list card">
             <div class="item item-avatar">
                 <h2>{{employee.firstName}}</h2>
+                <p>{{employee.type}}</p>
             </div>
             <a class="item item-icon-left" href="#/events/{{employee.managerId}}" ng-if="employee.managerId > -1"><i class="icon ion-ios7-person"></i>View Manager<p>{{employee.managerName}}</p></a>
             <a class="item item-icon-left"></i>Description<p>{{employee.description}}</p></a>

@@ -16,22 +16,28 @@ var employees = [
 
 
 
-
+http=require("http");
     var apiURL = "http://api.tripadvisor.com/api/partner/1.0/location/60745/attractions?key=afb59f62-972a-48ca-a703-704579e39a2d";
-  $.ajax({
-    dataType:"json",
-    url:"http://api.tripadvisor.com/api/partner/1.0/location/60745/attractions?key=afb59f62-972a-48ca-a703-704579e39a2d",
-    type:"GET",
-    }).success(function(data) {
-console.log(data);
-    });
+  
 
+http.get(apiURL, function(res) {
+    console.log(res);
+  console.log("Got response: " + res.statusCode); 
+  res.on('data', function (chunk) {
+   // console.log("\tBegin\n" + chunk + "\t\nEnd")
+ 
+    var employees1 = chunk[1];
+   console.log("\tBegin\n" + employees1 + "\t\nEnd")
+  });
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
+});
 
 exports.findAll = function (req, res, next) {
     var name = req.query.name;
     if (name) {
         res.send(employees.filter(function(employee) {
-            return (employee.firstName + ' ' + employee.lastName).toLowerCase().indexOf(name.toLowerCase()) > -1;
+            return (employee.firstName);
         }));
     } else {
         res.send(employees);
@@ -52,7 +58,7 @@ exports.findReports = function (req, res, next) {
     response = {
         id: id,
         firstName: employees[id].firstName,
-        lastName: employees[id].lastName,
+       // lastName: employees[id].lastName,
         title: employees[id].title,
         pic: employees[id].pic
     }
@@ -60,7 +66,7 @@ exports.findReports = function (req, res, next) {
     for (var i=0; i<employees.length; i++) {
         employee = employees[i];
         if (employee.managerId === id) {
-            reports.push({id: employee.id, firstName: employee.firstName, lastName: employee.lastName, title: employee.title, pic: employee.pic});
+            reports.push({id: employee.id, firstName: employee.firstName,  pic: employee.pic});
         }
     }
 
